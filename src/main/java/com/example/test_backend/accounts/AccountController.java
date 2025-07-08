@@ -61,7 +61,4 @@ public class AccountController {
 
     @Schema(description = "Initial amount for the new account")
     record CreateAccountDto(@Min(0) long initialAmount) {}
-
-    @Schema(description = "Initial amount for the new account")
-    record AccountDetailsDto(@Min(0) long balance) {}
 }
