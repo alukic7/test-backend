@@ -20,7 +20,7 @@ public class SessionRepositoryImpl implements SessionRepository {
         jdbc.update("""
         INSERT INTO paymentschema.sessions
               (id, user_id, expires_at, csrf_token)
-        VALUES (?, ?, now() + INTERVAL '2 minutes', ?)
+        VALUES (?, ?, now() + INTERVAL '5 minutes', ?)
         """, sessionId, userId, csrfToken);
         return new Session(sessionId, userId,
                 LocalDateTime.now(),
